@@ -1,21 +1,21 @@
 {
-  "name": "materio-mui-react-nextjs-admin-template-free",
-  "description": "Most Powerful & Comprehensive Free MUI React NextJS Admin Dashboard Template built for developers! 🚀",
+  "name": "Tro4U",
+  "description": "Trọ 4U description",
   "license": "MIT",
   "version": "1.0.0",
   "author": {
-    "name": "ThemeSelection",
+    "name": "Tro4U",
     "url": "https://themeselection.com/"
   },
   "bugs": {
     "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free/issues"
   },
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free.git"
+    "url": "https://tien0801.github.io/tro4u"
   },
-  "homepage": "https://themeselection.com/products/materio-free-mui-react-nextjs-admin-template/",
+  "homepage": "https://tien0801.github.io/tro4u",
   "keywords": [
     "react",
     "javascript",
@@ -41,7 +41,9 @@
     "start": "next start",
     "export": "next export",
     "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
