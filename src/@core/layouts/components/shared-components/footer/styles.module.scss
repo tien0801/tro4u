@@ -1,0 +1,71 @@
+@import "../../../../../assets/css/common.scss";
+.boxFooter {
+    display: flex;
+    column-gap: 1.5rem;
+    color: #fff;
+    padding: 2.5rem 0;
+    @include Responsive(MOBILE) {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        @include Responsive(MOBILE) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &.itemInfo {
+            width: 50%;
+
+            @include Responsive(MOBILE) {
+                width: 100%;
+            }
+
+            p {
+                max-width: 600px;
+            }
+        }
+
+        &.itemLink {
+            width: 20%;
+            @include Responsive(MOBILE) {
+                width: 100%;
+            }
+        }
+
+        &.itemContact {
+            width: 30%;
+            @include Responsive(MOBILE) {
+                width: 100%;
+            }
+        }
+
+        .titleItem {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 1.2rem;
+        }
+
+        .listLink {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            a {
+                color: #fff;
+                width: max-content;
+
+                &:hover {
+                    color: $color;
+                }
+            }
+        }
+
+        .listInfo {
+            p {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

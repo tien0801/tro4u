@@ -513,6 +513,13 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
+"@mui/icons-material@^5.14.9":
+  version "5.14.9"
+  resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.14.9.tgz"
+  integrity sha512-xTRQbDsogsJo7tY5Og8R9zbuG2q+KIPVIM6JQoKxtJlz9DPOw1u0T2fGrvwD+XAOVifQf6epNMcGCDLfJAz4Nw==
+  dependencies:
+    "@babel/runtime" "^7.22.15"
+
 "@mui/lab@^5.0.0-alpha.70":
   version "5.0.0-alpha.73"
   resolved "https://registry.npmjs.org/@mui/lab/-/lab-5.0.0-alpha.73.tgz"
@@ -699,6 +706,11 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.1.tgz"
   integrity sha512-BUyKJGdDWqvWC5GEhyOiUrGNi9iJUr4CU0O2WxJL6QJhHeeA/NVBalH+FeK0r/x/W0rPymXt5s78TDS7d6lCwg==
 
+"@types/css-modules@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@types/css-modules/-/css-modules-1.0.3.tgz"
+  integrity sha512-dFJKRbgpu3sMsiDYX7dSL7ZMD/9q1UxbU/dZfIuVsIyRsST/agUNfR24biGeLOmh3YcdUmj71TadJ0mssFVNfA==
+
 "@types/json-schema@^7.0.9":
   version "7.0.9"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.9.tgz"
@@ -709,12 +721,14 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/node@*":
-  version "17.0.21"
-  resolved "https://registry.npmjs.org/@types/node/-/node-17.0.21.tgz"
-  integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
+"@types/node-sass@^4.11.4":
+  version "4.11.4"
+  resolved "https://registry.npmjs.org/@types/node-sass/-/node-sass-4.11.4.tgz"
+  integrity sha512-huL/MeHB/1N8Z290ucSn1adUSPHU1GZIOEfvIzyY7LvNyzTrZQnWFAW50bcW3eOkDhuxy2T9WOBTIpydNhNEjg==
+  dependencies:
+    "@types/node" "*"
 
-"@types/node@16.11.11":
+"@types/node@*", "@types/node@16.11.11":
   version "16.11.11"
   resolved "https://registry.npmjs.org/@types/node/-/node-16.11.11.tgz"
   integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==

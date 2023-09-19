@@ -1,0 +1,67 @@
+// CSS general
+$color: #9155fd;
+$color_text: rgba(58, 53, 65, 0.87);
+$bg_hover: rgba(58, 53, 65, 0.04);
+
+// Variables in Media queries
+$X48: 480px;
+$XS: 575px;
+$SM: 576px;
+$MD: 768px;
+$LG: 992px;
+$XL: 1200px;
+$XXL: 1400px;
+$X17: 1700px;
+$X19: 1921px;
+
+$IPAD: 991px;
+$MOBILE: 767px;
+
+// Media queries
+@mixin Responsive($canvas) {
+    @if $canvas == X48 {
+        @media only screen and (max-width: $X48) {
+            @content;
+        }
+    } @else if $canvas == XS {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    } @else if $canvas == SM {
+        @media only screen and (min-width: $SM) {
+            @content;
+        }
+    } @else if $canvas == MD {
+        @media only screen and (min-width: $MD) {
+            @content;
+        }
+    } @else if $canvas == LG {
+        @media only screen and (min-width: $LG) {
+            @content;
+        }
+    } @else if $canvas == XL {
+        @media only screen and (min-width: $XL) {
+            @content;
+        }
+    } @else if $canvas == XXL {
+        @media only screen and (min-width: $XXL) {
+            @content;
+        }
+    } @else if $canvas == X17 {
+        @media only screen and (min-width: $X17) {
+            @content;
+        }
+    } @else if $canvas == X19 {
+        @media only screen and (min-width: $X19) {
+            @content;
+        }
+    } @else if $canvas == IPAD {
+        @media only screen and (max-width: $IPAD) {
+            @content;
+        }
+    } @else if $canvas == MOBILE {
+        @media only screen and (max-width: $MOBILE) {
+            @content;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 // ** Icons Imports
 import Menu from "mdi-material-ui/Menu";
 import Magnify from "mdi-material-ui/Magnify";
+import SearchIcon from "@mui/icons-material/Search";
 
 // ** Type Import
 import { Settings } from "src/@core/context/settingsContext";
@@ -17,8 +18,9 @@ import { Settings } from "src/@core/context/settingsContext";
 import ModeToggler from "src/@core/layouts/components/shared-components/ModeToggler";
 import UserDropdown from "src/@core/layouts/components/shared-components/UserDropdown";
 import NotificationDropdown from "src/@core/layouts/components/shared-components/NotificationDropdown";
-import { Button } from "@mui/material";
-import MenuHeader from "src/@core/layouts/components/shared-components/header/MenuHeader";
+import { Button, Typography } from "@mui/material";
+import MenuHeader from "src/@core/layouts/components/shared-components/header/Menu";
+import themeConfig from "src/configs/themeConfig";
 
 interface Props {
   hidden: boolean;
@@ -49,7 +51,19 @@ const AppBarContent = (props: Props) => {
         className="actions-left"
         sx={{ mr: 2, display: "flex", alignItems: "center" }}
       >
-        {hidden ? (
+        <Typography
+          variant="h6"
+          sx={{
+            ml: 3,
+            lineHeight: 1,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            fontSize: "1.5rem !important",
+          }}
+        >
+          {themeConfig.templateName}
+        </Typography>
+        {/* {hidden ? (
           <IconButton
             color="inherit"
             onClick={toggleNavVisibility}
@@ -68,11 +82,13 @@ const AppBarContent = (props: Props) => {
               </InputAdornment>
             ),
           }}
-        />
+        /> */}
       </Box>
+
       <Box>
         <MenuHeader></MenuHeader>
       </Box>
+
       <Box
         className="actions-right"
         sx={{ display: "flex", alignItems: "center" }}
@@ -92,6 +108,10 @@ const AppBarContent = (props: Props) => {
             />
           </Box>
         )} */}
+
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <SearchIcon />
+        </Box>
         <ModeToggler settings={settings} saveSettings={saveSettings} />
         {/* <NotificationDropdown /> */}
         <UserDropdown />
