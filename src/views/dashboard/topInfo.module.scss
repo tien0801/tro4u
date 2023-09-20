@@ -1,0 +1,21 @@
+@import "../../../src/assets/css/common.scss";
+
+.sectionInfo {
+    width: 100%;
+}
+.topTable {
+    margin-bottom: 1rem;
+    .boxLeft {
+    }
+
+    .boxRight {
+        text-align: right;
+
+        .listButton {
+            justify-content: flex-end;
+            @include Responsive(MOBILE) {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ import ModeToggler from "src/@core/layouts/components/shared-components/ModeTogg
 import UserDropdown from "src/@core/layouts/components/shared-components/UserDropdown";
 import NotificationDropdown from "src/@core/layouts/components/shared-components/NotificationDropdown";
 import { Button, Typography } from "@mui/material";
-import MenuHeader from "src/@core/layouts/components/shared-components/header/Menu";
+import MenuHeader from "src/@core/layouts/components/shared-components/MenuHeader";
 import themeConfig from "src/configs/themeConfig";
 
 interface Props {

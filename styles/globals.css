@@ -27,6 +27,15 @@ code[class*="language-"] {
   width: 100%;
   padding: 0 1.5rem;
 }
+
+.bg-white {
+  background-color: #fff;
+}
+
+.color-main {
+  color: #d400ff;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 100%;

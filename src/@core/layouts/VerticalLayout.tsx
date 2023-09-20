@@ -5,9 +5,14 @@ import { useState } from "react";
 import Fab from "@mui/material/Fab";
 import { styled } from "@mui/material/styles";
 import Box, { BoxProps } from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 // ** Icons Imports
 import ArrowUp from "mdi-material-ui/ArrowUp";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import GridViewIcon from "@mui/icons-material/GridView";
+import AddHomeOutlinedIcon from "@mui/icons-material/AddHomeOutlined";
 
 // ** Theme Config Import
 import themeConfig from "src/configs/themeConfig";
@@ -23,6 +28,9 @@ import ScrollToTop from "src/@core/components/scroll-to-top";
 
 // ** Styled Component
 import DatePickerWrapper from "src/@core/styles/libs/react-datepicker";
+import { Button, Divider, Link, Stack, Typography } from "@mui/material";
+import styles from "./styles.module.scss";
+import MenuMobile from "./components/vertical/menuMobile";
 
 const VerticalLayoutWrapper = styled("div")({
   height: "100%",
@@ -48,6 +56,14 @@ const ContentWrapper = styled("main")(({ theme }) => ({
   },
 }));
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
 const VerticalLayout = (props: LayoutProps) => {
   // ** Props
   const { settings, children, scrollToTop } = props;
@@ -65,18 +81,10 @@ const VerticalLayout = (props: LayoutProps) => {
   return (
     <>
       <VerticalLayoutWrapper className="layout-wrapper">
-        {/* Navigation Menu */}
-        {/* <Navigation
-          navWidth={navWidth}
-          navVisible={navVisible}
-          setNavVisible={setNavVisible}
-          toggleNavVisibility={toggleNavVisibility}
-          {...props}
-        /> */}
-
         <MainContentWrapper className="layout-content-wrapper">
           {/* AppBar Component */}
           <AppBar toggleNavVisibility={toggleNavVisibility} {...props} />
+          {/* <Divider style={{ borderColor: "#ddd" }} /> */}
 
           {/* Content */}
           <ContentWrapper
@@ -91,6 +99,8 @@ const VerticalLayout = (props: LayoutProps) => {
           >
             {children}
           </ContentWrapper>
+
+          <MenuMobile></MenuMobile>
 
           {/* Footer Component */}
           <Footer {...props} />

@@ -88,50 +88,48 @@ function MenuHeader() {
   }
 
   return (
-    <div>
-      <Box
-        className={styles.boxMenu}
-        sx={{
-          flexGrow: 1,
-          display: { xs: "none", md: "flex" },
-          alignItems: "center",
-        }}
-      >
-        <ul>
-          {pages_.map((menu) =>
-            menu.sub == false ? (
-              <li className={router.pathname == menu.url ? styles.active : ""}>
-                <Link
-                  className={styles.item}
-                  href={menu.url}
-                  key={menu.name}
-                  sx={{
-                    my: 2,
-                    color: "#000",
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: "5px",
-                  }}
-                >
-                  {menu.icon} {menu.name}
-                </Link>
-              </li>
-            ) : (
-              <li className={router.pathname == menu.url ? styles.active : ""}>
-                <Link className={styles.itemSub} href={menu.url}>
-                  {menu.icon} {menu.name}
-                  <Box className={styles.subMenu}>
-                    {menu.listSub?.map((item) => (
-                      <Link href="#a">{item.nameSub}</Link>
-                    ))}
-                  </Box>
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
-      </Box>
-    </div>
+    <Box
+      className={styles.boxMenu}
+      sx={{
+        flexGrow: 1,
+        display: { xs: "none", md: "flex" },
+        alignItems: "center",
+      }}
+    >
+      <ul>
+        {pages_.map((menu) =>
+          menu.sub == false ? (
+            <li className={router.pathname == menu.url ? styles.active : ""}>
+              <Link
+                className={styles.item}
+                href={menu.url}
+                key={menu.name}
+                sx={{
+                  my: 2,
+                  color: "#000",
+                  display: "flex",
+                  alignItems: "center",
+                  columnGap: "5px",
+                }}
+              >
+                {menu.icon} {menu.name}
+              </Link>
+            </li>
+          ) : (
+            <li className={router.pathname == menu.url ? styles.active : ""}>
+              <Link className={styles.itemSub} href={menu.url}>
+                {menu.icon} {menu.name}
+                <Box className={styles.subMenu}>
+                  {menu.listSub?.map((item) => (
+                    <Link href="#a">{item.nameSub}</Link>
+                  ))}
+                </Box>
+              </Link>
+            </li>
+          )
+        )}
+      </ul>
+    </Box>
   );
 }
 

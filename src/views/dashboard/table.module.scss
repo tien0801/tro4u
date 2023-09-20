@@ -1,0 +1,39 @@
+@import "../../../src/assets/css/common.scss";
+
+.topTable {
+    padding: 10px 1rem;
+    margin-bottom: 1rem;
+
+    .boxLeft {
+        .roomChart {
+            background-color: #000;
+            color: red;
+        }
+    }
+
+    .boxRight {
+        text-align: right;
+
+        .listButton {
+            justify-content: flex-end;
+            @include Responsive(MOBILE) {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.stickyColumn {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    border-right: 1px solid rgba(58, 53, 65, 0.12);
+}
+
+thead {
+    .stickyColumn {
+        z-index: 99 !important;
+    }
+}

@@ -21,11 +21,12 @@ import StatisticsCard from "src/views/dashboard/StatisticsCard";
 import WeeklyOverview from "src/views/dashboard/WeeklyOverview";
 import DepositWithdraw from "src/views/dashboard/DepositWithdraw";
 import SalesByCountries from "src/views/dashboard/SalesByCountries";
+import TopInfo from "src/views/dashboard/TopInfo";
 
 const Dashboard = () => {
   return (
     <ApexChartWrapper>
-      <Grid container spacing={6}>
+      <Grid container rowSpacing={6}>
         {/* <Grid item xs={12} md={4}>
           <Trophy />
         </Grid>
@@ -90,6 +91,8 @@ const Dashboard = () => {
         <Grid item xs={12} md={12} lg={8}>
           <DepositWithdraw />
         </Grid> */}
+
+        <TopInfo></TopInfo>
         <Grid item xs={12}>
           <Table />
         </Grid>

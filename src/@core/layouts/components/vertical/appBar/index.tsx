@@ -1,70 +1,84 @@
 // ** React Imports
-import { ReactNode } from 'react'
+import { ReactNode } from "react";
 
 // ** MUI Imports
-import { styled, useTheme } from '@mui/material/styles'
-import MuiAppBar, { AppBarProps } from '@mui/material/AppBar'
-import MuiToolbar, { ToolbarProps } from '@mui/material/Toolbar'
+import { styled, useTheme } from "@mui/material/styles";
+import MuiAppBar, { AppBarProps } from "@mui/material/AppBar";
+import MuiToolbar, { ToolbarProps } from "@mui/material/Toolbar";
 
 // ** Type Import
-import { Settings } from 'src/@core/context/settingsContext'
+import { Settings } from "src/@core/context/settingsContext";
+import { Divider } from "@mui/material";
 
 interface Props {
-  hidden: boolean
-  settings: Settings
-  toggleNavVisibility: () => void
-  saveSettings: (values: Settings) => void
-  verticalAppBarContent?: (props?: any) => ReactNode
+  hidden: boolean;
+  settings: Settings;
+  toggleNavVisibility: () => void;
+  saveSettings: (values: Settings) => void;
+  verticalAppBarContent?: (props?: any) => ReactNode;
 }
 
 const AppBar = styled(MuiAppBar)<AppBarProps>(({ theme }) => ({
-  transition: 'none',
-  alignItems: 'center',
-  justifyContent: 'center',
+  transition: "none",
+  alignItems: "center",
+  justifyContent: "center",
   padding: theme.spacing(0, 6),
-  backgroundColor: 'transparent',
+  backgroundColor: "transparent",
   color: theme.palette.text.primary,
   minHeight: theme.mixins.toolbar.minHeight,
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down("sm")]: {
     paddingLeft: theme.spacing(4),
-    paddingRight: theme.spacing(4)
-  }
-}))
+    paddingRight: theme.spacing(4),
+  },
+}));
 
 const Toolbar = styled(MuiToolbar)<ToolbarProps>(({ theme }) => ({
-  width: '100%',
+  width: "100%",
   borderBottomLeftRadius: 10,
   borderBottomRightRadius: 10,
   padding: `${theme.spacing(0)} !important`,
   minHeight: `${theme.mixins.toolbar.minHeight}px !important`,
   transition:
-    'padding .25s ease-in-out, box-shadow .25s ease-in-out, backdrop-filter .25s ease-in-out, background-color .25s ease-in-out'
-}))
+    "padding .25s ease-in-out, box-shadow .25s ease-in-out, backdrop-filter .25s ease-in-out, background-color .25s ease-in-out",
+}));
 
 const LayoutAppBar = (props: Props) => {
   // ** Props
-  const { settings, verticalAppBarContent: userVerticalAppBarContent } = props
+  const { settings, verticalAppBarContent: userVerticalAppBarContent } = props;
 
   // ** Hooks
-  const theme = useTheme()
+  const theme = useTheme();
 
   // ** Vars
-  const { contentWidth } = settings
+  const { contentWidth } = settings;
 
   return (
-    <AppBar elevation={0} color='default' className='layout-navbar' position='static'>
+    <AppBar
+      elevation={0}
+      color="default"
+      className="layout-navbar"
+      position="static"
+      style={{
+        backgroundColor: "#fff",
+        boxShadow: "0px 2px 10px 0px rgba(58, 53, 65, 0.1)",
+        marginBottom: 20,
+      }}
+    >
       <Toolbar
-        className='navbar-content-container'
+        className="navbar-content-container"
         sx={{
-          ...(contentWidth === 'boxed' && {
-            '@media (min-width:1440px)': { maxWidth: `calc(1440px - ${theme.spacing(6)} * 2)` }
-          })
+          ...(contentWidth === "boxed" && {
+            "@media (min-width:1440px)": {
+              maxWidth: `calc(1440px - ${theme.spacing(6)} * 2)`,
+            },
+          }),
         }}
       >
-        {(userVerticalAppBarContent && userVerticalAppBarContent(props)) || null}
+        {(userVerticalAppBarContent && userVerticalAppBarContent(props)) ||
+          null}
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
-export default LayoutAppBar
+export default LayoutAppBar;
