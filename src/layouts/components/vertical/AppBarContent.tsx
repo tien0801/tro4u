@@ -112,7 +112,7 @@ const AppBarContent = (props: Props) => {
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <SearchIcon />
         </Box>
-        <ModeToggler settings={settings} saveSettings={saveSettings} />
+        {/* <ModeToggler settings={settings} saveSettings={saveSettings} /> */}
         {/* <NotificationDropdown /> */}
         <UserDropdown />
       </Box>
