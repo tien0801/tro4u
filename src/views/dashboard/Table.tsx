@@ -35,15 +35,17 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { Centos } from "mdi-material-ui";
 
+// ** Types Import
 interface RowType {
   id: string;
   name: string;
-  status: string;
-  deposit?: string;
+  status?: any;
+  dateCoc?: string;
+  dateTra?: string;
   phone: string;
   time: string;
   date: string;
-  avatar: string;
+  user: any;
   cash: string;
   price: string;
 }
@@ -57,12 +59,26 @@ interface StatusObj {
 const rows: RowType[] = [
   {
     id: "A27",
-    status: "Báo trả",
+    status: [
+      {
+        name: "Báo trả",
+        date: "20/10",
+      },
+    ],
     time: "10/11/2023 - 20/11/2024",
     name: "Sally Quinn",
     cash: "1.195.000",
     price: "5.000.000",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/1.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+    ],
     phone: "0909090900",
     date: "09/27/2018",
   },
@@ -71,9 +87,27 @@ const rows: RowType[] = [
     time: "10/11/2023 - 20/11/2024",
     cash: "1.238.000",
     price: "5.000.000",
-    status: "Cho thuê",
+    status: [
+      {
+        name: "Cho thuê",
+        date: "20/10",
+      },
+    ],
     name: "Margaret Bowers",
-    avatar: "/images/avatars/2.png",
+    user: [
+      {
+        avatar: "/images/avatars/1.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+      {
+        avatar: "/images/avatars/3.png",
+        name: "User 3",
+      },
+    ],
     date: "09/23/2016",
     phone: "0909090900",
   },
@@ -81,34 +115,82 @@ const rows: RowType[] = [
     id: "A59",
     time: "10/11/2023 - 20/11/2024",
     name: "Minnie Roy",
-    status: "Đang trống",
+    status: [
+      {
+        name: "Đang trống",
+        date: "20/10",
+      },
+    ],
     cash: "1.189.000",
     price: "5.000.000",
-    avatar: "/images/avatars/3.png",
+    user: [
+      {
+        avatar: "/images/avatars/1.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+      {
+        avatar: "/images/avatars/4.png",
+        name: "User 4",
+      },
+      {
+        avatar: "/images/avatars/5.png",
+        name: "User 5",
+      },
+    ],
     date: "10/15/2017",
     phone: "0909090900",
   },
   {
     id: "A30",
     time: "10/11/2023 - 20/11/2024",
-    status: "Báo trả có cọc",
+    status: [
+      {
+        name: "Báo trả",
+        date: "20/11",
+      },
+      {
+        name: "Đang cọc",
+        date: "10/10",
+      },
+    ],
+    dateCoc: "20/10",
+    dateTra: "20/10",
     cash: "1.192.000",
     price: "5.000.000",
     name: "Ralph Leonard",
-    avatar: "",
+    user: [
+      {
+        avatar: "/images/avatars/6.png",
+        name: "User 2",
+      },
+    ],
     date: "06/12/2018",
     phone: "0909090900",
   },
   {
     id: "A66",
-    status: "Đang cọc",
-    deposit: "12/9",
+    status: [
+      {
+        name: "Đang cọc",
+        date: "20/10",
+      },
+    ],
+    dateCoc: "12/9",
     time: "10/11/2023 - 20/11/2024",
     cash: "1.130.000",
     price: "5.000.000",
     name: "Annie Martin",
     phone: "0909090900",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 1",
+      },
+    ],
     date: "03/24/2018",
   },
   {
@@ -117,20 +199,48 @@ const rows: RowType[] = [
     cash: "1.109.000",
     price: "5.000.000",
     name: "Adeline Day",
-    status: "Cho thuê",
-    avatar: "/images/avatars/1.png",
+    status: [
+      {
+        name: "Cho thuê",
+        date: "20/10",
+      },
+    ],
+    user: [
+      {
+        avatar: "/images/avatars/7.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/8.png",
+        name: "User 1",
+      },
+    ],
     date: "08/25/2017",
     phone: "0909090900",
   },
   {
     id: "A61",
-    status: "Báo trả",
+    status: [
+      {
+        name: "Báo trả",
+        date: "20/10",
+      },
+    ],
     time: "10/11/2023 - 20/11/2024",
     cash: "1.178.000",
     price: "5.000.000",
     name: "Lora Jackson",
     phone: "0909090900",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/3.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+    ],
     date: "06/01/2017",
   },
   {
@@ -139,10 +249,24 @@ const rows: RowType[] = [
     cash: "1.123.000",
     price: "5.000.000",
     name: "Rodney Sharp",
-    status: "Cho thuê",
+    status: [
+      {
+        name: "Cho thuê",
+        date: "20/10",
+      },
+    ],
     phone: "0909090900",
     date: "12/03/2017",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/7.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+    ],
   },
   {
     id: "A22",
@@ -150,10 +274,24 @@ const rows: RowType[] = [
     cash: "1.123.000",
     price: "5.000.000",
     name: "Rodney Sharp",
-    status: "Cho thuê",
+    status: [
+      {
+        name: "Cho thuê",
+        date: "20/10",
+      },
+    ],
     phone: "0909090900",
     date: "12/03/2017",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/1.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+    ],
   },
   {
     id: "A22",
@@ -161,19 +299,33 @@ const rows: RowType[] = [
     cash: "1.123.000",
     price: "5.000.000",
     name: "Rodney Sharp",
-    status: "Cho thuê",
+    status: [
+      {
+        name: "Cho thuê",
+        date: "20/10",
+      },
+    ],
     phone: "0909090900",
     date: "12/03/2017",
-    avatar: "/images/avatars/1.png",
+    user: [
+      {
+        avatar: "/images/avatars/1.png",
+        name: "User 1",
+      },
+      {
+        avatar: "/images/avatars/2.png",
+        name: "User 2",
+      },
+    ],
   },
 ];
 
 const statusObj: StatusObj = {
-  "Đang cọc": { color: "info" },
   "Đang trống": { color: "error" },
+  "Đang cọc": { color: "info" },
+  "Cho thuê": { color: "success" },
   "Báo trả": { color: "primary" },
   "Báo trả có cọc": { color: "warning" },
-  "Cho thuê": { color: "success" },
 };
 
 const data = {
@@ -268,38 +420,70 @@ const DashboardTable = () => {
                 sx={{ "&:last-of-type td, &:last-of-type th": { border: 0 } }}
               >
                 <TableCell
-                  style={{ borderRight: "1px solid rgba(58, 53, 65, 0.12)" }}
+                  style={{
+                    color: "#000",
+                    backgroundColor: `${
+                      row.status[0].name == "Đang trống"
+                        ? "rgba(255, 76, 81, .7)"
+                        : row.status[0].name == "Đang cọc"
+                        ? "rgba(22, 177, 255, .7)"
+                        : row.status[0].name == "Cho thuê"
+                        ? "rgba(86, 202, 0, .7)"
+                        : row.status[0].name == "Báo trả"
+                        ? "rgba(145, 85, 253, .7)"
+                        : "initial"
+                    }`,
+                    backgroundImage: `${
+                      row.status[0].name == "Báo trả" &&
+                      row.status[1]?.name == "Đang cọc"
+                        ? "linear-gradient(to bottom , rgba(145, 85, 253, .7), rgba(22, 177, 255, .7))"
+                        : "initial"
+                    }`,
+                  }}
                   className={styles.stickyColumn}
                 >
                   {row.id}
                 </TableCell>
                 <TableCell>
-                  {row.avatar ? (
-                    <Badge>
-                      <Avatar
-                        alt="John Doe"
-                        sx={{ width: 40, height: 40 }}
-                        src={row.avatar}
-                      />
-                    </Badge>
+                  {row.user ? (
+                    <Stack direction="row" spacing={2}>
+                      {row.user.map((items: any) => (
+                        <Avatar
+                          alt={items.name}
+                          sx={{ width: 38, height: 38 }}
+                          src={items.avatar}
+                        />
+                      ))}
+                    </Stack>
                   ) : (
                     ""
                   )}
                 </TableCell>
                 <TableCell>{row.phone}</TableCell>
                 <TableCell>
-                  <Chip
-                    label={`${row.status}${
-                      row.deposit ? `: ${row.deposit}` : ""
-                    }`}
-                    color={statusObj[row.status].color}
+                  <Box
                     sx={{
-                      height: 24,
-                      fontSize: "0.75rem",
-                      textTransform: "capitalize",
-                      "& .MuiChip-label": { fontWeight: 500 },
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 1,
+                      alignItems: "flex-start",
                     }}
-                  />
+                  >
+                    {row.status.map((item: any) => (
+                      <Chip
+                        label={`${item.name}${
+                          row.dateCoc ? `: ${row.dateCoc}` : ""
+                        }`}
+                        color={statusObj[item.name].color}
+                        sx={{
+                          height: 24,
+                          fontSize: "0.75rem",
+                          textTransform: "capitalize",
+                          "& .MuiChip-label": { fontWeight: 500 },
+                        }}
+                      />
+                    ))}
+                  </Box>
                 </TableCell>
                 <TableCell>{row.time}</TableCell>
                 <TableCell>{row.cash}</TableCell>

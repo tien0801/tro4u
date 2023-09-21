@@ -40,6 +40,7 @@ const Footer = (props: Props) => {
         alignItems: "center",
         justifyContent: "center",
         bgcolor: "#888",
+        mt: "1.5rem",
       }}
     >
       {/* <Box
