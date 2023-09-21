@@ -335,11 +335,11 @@ const data = {
       label: "Số phòng",
       data: [40, 20, 30, 10, 25],
       backgroundColor: [
-        "rgba(255, 76, 81, 0.7)",
-        "rgba(22, 177, 255, 0.7)",
-        "rgba(86, 202, 0, 0.7)",
-        "rgba(145, 85, 253, 0.7)",
-        "rgba(255, 180, 0, 0.7)",
+        "rgba(255, 76, 81, 0.8)",
+        "rgba(22, 177, 255, 0.8)",
+        "rgba(86, 202, 0, 0.8)",
+        "rgba(145, 85, 253, 0.8)",
+        "rgba(255, 180, 0, 0.8)",
       ],
       borderColor: [
         "rgba(255, 76, 81, 1)",
@@ -424,13 +424,13 @@ const DashboardTable = () => {
                     color: "#000",
                     backgroundColor: `${
                       row.status[0].name == "Đang trống"
-                        ? "rgba(255, 76, 81, .7)"
+                        ? "rgba(255, 76, 81, 1)"
                         : row.status[0].name == "Đang cọc"
-                        ? "rgba(22, 177, 255, .7)"
+                        ? "rgba(22, 177, 255, 1)"
                         : row.status[0].name == "Cho thuê"
-                        ? "rgba(86, 202, 0, .7)"
+                        ? "rgba(86, 202, 0, 1)"
                         : row.status[0].name == "Báo trả"
-                        ? "rgba(145, 85, 253, .7)"
+                        ? "rgba(145, 85, 253, 1)"
                         : "initial"
                     }`,
                     backgroundImage: `${
