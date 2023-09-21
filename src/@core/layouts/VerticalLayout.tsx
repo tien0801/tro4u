@@ -113,7 +113,7 @@ const VerticalLayout = (props: LayoutProps) => {
       </VerticalLayoutWrapper>
 
       {/* Scroll to top button */}
-      {scrollToTop ? (
+      {/* {scrollToTop ? (
         scrollToTop(props)
       ) : (
         <ScrollToTop className="mui-fixed">
@@ -121,7 +121,7 @@ const VerticalLayout = (props: LayoutProps) => {
             <ArrowUp />
           </Fab>
         </ScrollToTop>
-      )}
+      )} */}
     </>
   );
 };

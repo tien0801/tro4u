@@ -73,7 +73,7 @@ const Error404 = () => {
         <Img
           height="487"
           alt="error-illustration"
-          src="/images/pages/404.png"
+          src="https://tien0801.github.io/tro4u/images/pages/404.png"
         />
         <Link passHref href="/">
           <Button component="a" variant="contained" sx={{ px: 5.5 }}>
@@ -82,7 +82,12 @@ const Error404 = () => {
         </Link>
       </Box>
       <FooterIllustrations
-        image={<TreeIllustration alt="tree" src="/images/pages/tree.png" />}
+        image={
+          <TreeIllustration
+            alt="tree"
+            src="https://tien0801.github.io/tro4u/images/pages/tree.png"
+          />
+        }
       />
     </Box>
   );
