@@ -71,11 +71,11 @@ const rows: RowType[] = [
     price: "5.000.000",
     user: [
       {
-        avatar: "/images/avatars/1.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/1.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
     ],
@@ -96,15 +96,15 @@ const rows: RowType[] = [
     name: "Margaret Bowers",
     user: [
       {
-        avatar: "/images/avatars/1.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/1.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
       {
-        avatar: "/images/avatars/3.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/3.png",
         name: "User 3",
       },
     ],
@@ -125,19 +125,19 @@ const rows: RowType[] = [
     price: "5.000.000",
     user: [
       {
-        avatar: "/images/avatars/1.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/1.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
       {
-        avatar: "/images/avatars/4.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/4.png",
         name: "User 4",
       },
       {
-        avatar: "/images/avatars/5.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/5.png",
         name: "User 5",
       },
     ],
@@ -164,7 +164,7 @@ const rows: RowType[] = [
     name: "Ralph Leonard",
     user: [
       {
-        avatar: "/images/avatars/6.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/6.png",
         name: "User 2",
       },
     ],
@@ -187,7 +187,7 @@ const rows: RowType[] = [
     phone: "0909090900",
     user: [
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 1",
       },
     ],
@@ -207,11 +207,11 @@ const rows: RowType[] = [
     ],
     user: [
       {
-        avatar: "/images/avatars/7.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/7.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/8.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/8.png",
         name: "User 1",
       },
     ],
@@ -233,11 +233,11 @@ const rows: RowType[] = [
     phone: "0909090900",
     user: [
       {
-        avatar: "/images/avatars/3.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/3.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
     ],
@@ -259,11 +259,11 @@ const rows: RowType[] = [
     date: "12/03/2017",
     user: [
       {
-        avatar: "/images/avatars/7.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/7.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
     ],
@@ -284,11 +284,11 @@ const rows: RowType[] = [
     date: "12/03/2017",
     user: [
       {
-        avatar: "/images/avatars/1.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/1.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
     ],
@@ -309,11 +309,11 @@ const rows: RowType[] = [
     date: "12/03/2017",
     user: [
       {
-        avatar: "/images/avatars/1.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/1.png",
         name: "User 1",
       },
       {
-        avatar: "/images/avatars/2.png",
+        avatar: "https://tien0801.github.io/tro4u/images/avatars/2.png",
         name: "User 2",
       },
     ],

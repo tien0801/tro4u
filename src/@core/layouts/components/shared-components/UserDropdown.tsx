@@ -77,7 +77,7 @@ const UserDropdown = () => {
           alt="John Doe"
           onClick={handleDropdownOpen}
           sx={{ width: 40, height: 40 }}
-          src="/images/avatars/1.png"
+          src="https://tien0801.github.io/tro4u/images/avatars/1.png"
         />
       </Badge>
       <Menu
