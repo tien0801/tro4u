@@ -13,7 +13,13 @@
         display: none;
     }
 
-    a.active {
-        color: $color;
+    a {
+        @media (max-width: 374px) {
+            min-width: 50px;
+            padding: 6px 8px;
+        }
+        &.active {
+            color: $color;
+        }
     }
 }

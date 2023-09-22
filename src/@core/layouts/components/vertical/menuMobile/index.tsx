@@ -91,30 +91,6 @@ const MenuMobile = () => {
             href={menu.url}
           />
         ))}
-        {/* <BottomNavigationAction
-          value="/Customer"
-          label="Khách"
-          icon={<GroupsIcon />}
-          href="/Customer"
-        />
-        <BottomNavigationAction
-          value="/Money"
-          label="Tiền"
-          icon={<PaidIcon />}
-          href="/Money"
-        />
-        <BottomNavigationAction
-          value="/Report"
-          label="Báo cáo"
-          icon={<BarChartIcon />}
-          href="/Report"
-        />
-        <BottomNavigationAction
-          value="/Manager"
-          label="Quản lý"
-          icon={<TokenIcon />}
-          href="/Manager"
-        /> */}
       </BottomNavigation>
     </Box>
   );

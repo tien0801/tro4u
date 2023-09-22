@@ -46,3 +46,17 @@ code[class*="language-"] {
     max-width: 1440px;
   }
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 374px) {
+  button.MuiButton-root {
+    font-size: 0.8rem;
+    min-width: 60px;
+    padding: 6px 16px;
+  }
+}
